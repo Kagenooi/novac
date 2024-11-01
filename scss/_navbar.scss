@@ -1,0 +1,40 @@
+.navbar {
+    background: #132539;
+    height: 100%;
+    padding: 60px 30px;
+    grid-row: 1 / 3;
+
+    &__logo {
+        padding-bottom: 80px;
+        border-bottom: 1px solid #2E3354;
+    }
+
+    &__menu {
+        display: grid;
+        grid-gap: 12px;
+        margin: 30px 0;
+
+        &_link {
+            display: flex;
+            align-items: center;
+            grid-gap: 10px;
+            padding: 10px;
+            border-radius: 6px;
+
+            &:hover,
+            &.active {
+                background: #2E3354;
+            }
+
+            &_txt {
+                color: #fff;
+                font-size: 24px;
+            }
+
+            &_icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

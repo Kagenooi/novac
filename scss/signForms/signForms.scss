@@ -1,0 +1,114 @@
+@import '../main';
+@import '../footer';
+@import '../navbar';
+@import '../kit';
+
+body {
+    background: #132539;
+}
+
+.registration,
+.login,
+.forgot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 520px;
+        background: #fff;
+        padding: 50px;
+    }
+
+    &__logo {
+        margin-bottom: 35px;
+        color: transparent;
+        font-size: 0px;
+        max-width: 300px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__container {
+        display: grid;
+        grid-gap: 25px;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__pr {
+        margin-bottom: 20px;
+    }
+
+    &__footer {
+        display: grid;
+        gap: 15px;
+
+        &_pr {
+            display: flex;
+            gap: 10px;
+            font-size: 16px;
+
+            &_link {
+                color: #32AC70;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_link {
+            color: #32AC70;
+            font-weight: 600;
+        }
+
+        &_label {
+            display: flex;
+            align-items: center;
+            grid-gap: 10px;
+            cursor: pointer;
+
+            &_inp {
+                display: none;
+            }
+
+            &_check {
+                display: block;
+                width: 20px;
+                min-width: 20px;
+                height: 20px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #9397B6;
+                border-radius: 2px;
+                position: relative;
+
+                &_cheched {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &_inp:checked+&_check {
+                background: #32AC70;
+                border-color: #32AC70;
+            }
+
+            &_inp:active+&_check {
+                border-color: #77BE9D;
+            }
+        }
+    }
+}
