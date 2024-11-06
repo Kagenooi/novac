@@ -588,6 +588,7 @@ body {
 }
 
 .registration,
+.recover,
 .login,
 .forgot {
   display: flex;
@@ -597,6 +598,7 @@ body {
   width: 100%;
 }
 .registration__wrapper,
+.recover__wrapper,
 .login__wrapper,
 .forgot__wrapper {
   width: 100%;
@@ -605,6 +607,7 @@ body {
   padding: 50px;
 }
 .registration__logo,
+.recover__logo,
 .login__logo,
 .forgot__logo {
   margin-bottom: 35px;
@@ -613,33 +616,39 @@ body {
   max-width: 300px;
 }
 .registration__title,
+.recover__title,
 .login__title,
 .forgot__title {
   margin-bottom: 25px;
 }
 .registration__container,
+.recover__container,
 .login__container,
 .forgot__container {
   display: grid;
   grid-gap: 25px;
 }
 .registration__btn,
+.recover__btn,
 .login__btn,
 .forgot__btn {
   width: 100%;
 }
 .registration__pr,
+.recover__pr,
 .login__pr,
 .forgot__pr {
   margin-bottom: 20px;
 }
 .registration__footer,
+.recover__footer,
 .login__footer,
 .forgot__footer {
   display: grid;
   gap: 15px;
 }
 .registration__footer_pr,
+.recover__footer_pr,
 .login__footer_pr,
 .forgot__footer_pr {
   display: flex;
@@ -647,12 +656,14 @@ body {
   font-size: 16px;
 }
 .registration__footer_pr_link,
+.recover__footer_pr_link,
 .login__footer_pr_link,
 .forgot__footer_pr_link {
   color: #32AC70;
   font-weight: 600;
 }
 .registration__btns,
+.recover__btns,
 .login__btns,
 .forgot__btns {
   display: flex;
@@ -660,12 +671,14 @@ body {
   justify-content: space-between;
 }
 .registration__btns_link,
+.recover__btns_link,
 .login__btns_link,
 .forgot__btns_link {
   color: #32AC70;
   font-weight: 600;
 }
 .registration__btns_label,
+.recover__btns_label,
 .login__btns_label,
 .forgot__btns_label {
   display: flex;
@@ -674,11 +687,13 @@ body {
   cursor: pointer;
 }
 .registration__btns_label_inp,
+.recover__btns_label_inp,
 .login__btns_label_inp,
 .forgot__btns_label_inp {
   display: none;
 }
 .registration__btns_label_check,
+.recover__btns_label_check,
 .login__btns_label_check,
 .forgot__btns_label_check {
   display: block;
@@ -692,6 +707,7 @@ body {
   position: relative;
 }
 .registration__btns_label_check_cheched,
+.recover__btns_label_check_cheched,
 .login__btns_label_check_cheched,
 .forgot__btns_label_check_cheched {
   position: absolute;
@@ -699,24 +715,38 @@ body {
   left: 0;
 }
 .registration__btns_label_inp:checked + .registration__btns_label_check,
+.registration__btns_label_inp:checked + .recover__btns_label_check,
 .registration__btns_label_inp:checked + .login__btns_label_check,
 .registration__btns_label_inp:checked + .forgot__btns_label_check,
+.recover__btns_label_inp:checked + .registration__btns_label_check,
+.recover__btns_label_inp:checked + .recover__btns_label_check,
+.recover__btns_label_inp:checked + .login__btns_label_check,
+.recover__btns_label_inp:checked + .forgot__btns_label_check,
 .login__btns_label_inp:checked + .registration__btns_label_check,
+.login__btns_label_inp:checked + .recover__btns_label_check,
 .login__btns_label_inp:checked + .login__btns_label_check,
 .login__btns_label_inp:checked + .forgot__btns_label_check,
 .forgot__btns_label_inp:checked + .registration__btns_label_check,
+.forgot__btns_label_inp:checked + .recover__btns_label_check,
 .forgot__btns_label_inp:checked + .login__btns_label_check,
 .forgot__btns_label_inp:checked + .forgot__btns_label_check {
   background: #32AC70;
   border-color: #32AC70;
 }
 .registration__btns_label_inp:active + .registration__btns_label_check,
+.registration__btns_label_inp:active + .recover__btns_label_check,
 .registration__btns_label_inp:active + .login__btns_label_check,
 .registration__btns_label_inp:active + .forgot__btns_label_check,
+.recover__btns_label_inp:active + .registration__btns_label_check,
+.recover__btns_label_inp:active + .recover__btns_label_check,
+.recover__btns_label_inp:active + .login__btns_label_check,
+.recover__btns_label_inp:active + .forgot__btns_label_check,
 .login__btns_label_inp:active + .registration__btns_label_check,
+.login__btns_label_inp:active + .recover__btns_label_check,
 .login__btns_label_inp:active + .login__btns_label_check,
 .login__btns_label_inp:active + .forgot__btns_label_check,
 .forgot__btns_label_inp:active + .registration__btns_label_check,
+.forgot__btns_label_inp:active + .recover__btns_label_check,
 .forgot__btns_label_inp:active + .login__btns_label_check,
 .forgot__btns_label_inp:active + .forgot__btns_label_check {
   border-color: #77BE9D;
