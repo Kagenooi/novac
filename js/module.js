@@ -12,7 +12,6 @@ export function placeholderAnimate() {
     }
 }
 
-
 export function addFileLabel() {
     const inputFile = document.querySelectorAll('.inputFile');
     const clearFile = document.querySelectorAll('.clearFile');
@@ -32,40 +31,54 @@ export function addFileLabel() {
             inputFile[i].value = null
         });
     }
-} 
-
+}
 
 export function transactionTabs() {
+    let index = 0;
+
     const tabs = document.querySelectorAll('.transaction__tabs_item');
-    let index = 0; 
+    const steps = document.querySelectorAll('.transaction__steps_title');
+
     const transPrev = document.querySelector('#transPrev');
     const transNext = document.querySelector('#transNext');
-    transPrev.addEventListener('click', function() {
+
+    transPrev.addEventListener('click', function () {
         this.dataset.index = index;
         transNext.dataset.index = index;
         for (let i = 0; i < tabs.length; i++) {
             tabs[i].classList.remove('active');
+            steps[i].classList.remove('active');
         }
         if (index > 0) {
             index = index - 1;
         }
         tabs[index].classList.add('active');
+        steps[index].classList.add('active');
         this.dataset.index = index;
         transNext.dataset.index = index;
     });
-    transNext.addEventListener('click', function() {
+
+    transNext.addEventListener('click', function () {
         this.dataset.index = index;
         transPrev.dataset.index = index;
         for (let i = 0; i < tabs.length; i++) {
             tabs[i].classList.remove('active');
+            steps[index].classList.remove('active');
         }
         if (index < tabs.length - 1) {
             index = index + 1;
         }
-        console.log(index);
-        
         tabs[index].classList.add('active');
+        steps[index].classList.add('active');
         this.dataset.index = index;
         transPrev.dataset.index = index;
     });
+}
+
+export function toggleActive(elem) {
+    document.querySelector(`#${elem}`).classList.toggle('active');
+}
+
+export function chooseOption(elem, selected) {
+    document.querySelector(`#${selected}`).innerHTML = elem.innerHTML;
 }
