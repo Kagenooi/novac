@@ -296,7 +296,8 @@ body {
   height: 16px;
 }
 
-.dropdown {
+.dropdown,
+.accordion {
   position: relative;
   width: 100%;
   border-width: 1px;
@@ -304,11 +305,13 @@ body {
   border-style: solid;
   border-radius: 6px;
 }
-.dropdown__btn {
+.dropdown__btn,
+.accordion__btn {
   display: flex;
   justify-content: space-between;
 }
-.dropdown__wrapper {
+.dropdown__wrapper,
+.accordion__wrapper {
   position: absolute;
   top: 100%;
   left: 0;
@@ -327,25 +330,69 @@ body {
   opacity: 0;
   transition: 0.3s;
 }
-.dropdown__wrapper.active {
+.dropdown__wrapper.active,
+.accordion__wrapper.active {
   visibility: visible;
   opacity: 1;
   transition: 0.3s;
 }
-.dropdown__option, .dropdown__btn {
+.dropdown__option, .dropdown__btn,
+.accordion__option,
+.accordion__btn {
   width: 100%;
   padding: 12px 16px;
   transition: 0.2s;
 }
-.dropdown__option:hover, .dropdown__btn:hover {
+.dropdown__option:hover, .dropdown__btn:hover,
+.accordion__option:hover,
+.accordion__btn:hover {
   transition: 0.2s;
   background: rgba(0, 0, 0, 0.1254901961);
 }
-.dropdown.disabled {
+.dropdown.disabled,
+.accordion.disabled {
   opacity: 0.5;
 }
-.dropdown.disabled .dropdown__btn {
+.dropdown.disabled .dropdown__btn,
+.dropdown.disabled .accordion__btn,
+.accordion.disabled .dropdown__btn,
+.accordion.disabled .accordion__btn {
   cursor: not-allowed !important;
+}
+
+.accordion__wrapper {
+  visibility: visible;
+  opacity: 1;
+  max-height: 0px;
+  overflow: hidden;
+  position: static;
+  border: none;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 100%;
+}
+.accordion__wrapper_content {
+  width: 100%;
+  padding: 0 12px 12px;
+}
+.accordion__wrapper table {
+  border-collapse: separate;
+  table-layout: fixed;
+  border-spacing: 0 12px;
+  width: 100%;
+}
+.accordion__wrapper table * {
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+.accordion__wrapper table a {
+  color: #326fb6;
+}
+.accordion__wrapper table a:hover {
+  color: #098E4D;
 }
 
 .fieldDefault {
@@ -408,7 +455,7 @@ body {
 .fieldDefault__inp {
   width: 100%;
   padding: 14px 56px 14px 16px;
-  font-size: 14px;
+  font-size: 16px;
   color: #132539;
   position: relative;
   border-radius: 6px;

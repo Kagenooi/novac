@@ -10,7 +10,8 @@ import {
     addFileLabel,
     transactionTabs,
     toggleActive,
-    chooseOption
+    chooseOption,
+    accordion
 } from "../module.js";
 
 window.toggleActive = toggleActive;
@@ -26,3 +27,6 @@ placeholderAnimate();
 
 window.transactionTabs = transactionTabs;
 transactionTabs();
+
+window.accordion = accordion;
+accordion();

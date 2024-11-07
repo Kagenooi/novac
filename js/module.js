@@ -82,3 +82,19 @@ export function toggleActive(elem) {
 export function chooseOption(elem, selected) {
     document.querySelector(`#${selected}`).innerHTML = elem.innerHTML;
 }
+
+
+export function accordion() {
+    const acc = document.querySelectorAll('.accordion');
+    for (let i = 0; i < acc.length; i++) {
+        let accBtn = acc[i].querySelector('.accordion__btn');
+        let accWrapper = acc[i].querySelector('.accordion__wrapper');
+        accBtn.addEventListener('click', function() {
+            if (accWrapper.style.maxHeight) {
+                accWrapper.style.maxHeight = null;
+            } else {
+                accWrapper.style.maxHeight = accWrapper.style.maxHeight + accWrapper.scrollHeight + 'px';
+            }
+        })
+    }
+}
