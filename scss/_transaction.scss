@@ -1,0 +1,119 @@
+.transaction {
+    width: 100%;
+    position: relative;
+
+    .primaryBtn {
+        width: 100%;
+    }
+
+    &__closeBtn {
+        position: absolute;
+        top: -35px;
+        right: -70px;
+    }
+
+    &__steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: -80px;
+        margin-left: -40px;
+        border-radius: 20px 20px 0 0;
+        width: calc(100% + 80px);
+
+        &_title {
+            padding: 12px;
+            font-size: 22px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 20px 20px 0 0;
+            background: #E8EAEC;
+
+            &.active {
+                color: #fff;
+                background: #2E9B69;
+            }
+        }
+    }
+
+    &__tabs {
+        padding: 20px 0 0;
+
+        &_item {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 25px;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        &_details {
+            display: grid;
+            gap: 6px;
+            border-right: 1px solid #60606050;
+            padding-right: 25px;
+
+            &_el {
+                display: grid;
+                grid-template-columns: 120px 1fr;
+                align-items: center;
+                width: 100%;
+                gap: 20px;
+
+                * {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        &_total {
+            display: grid;
+            grid-gap: 6px;
+            padding-left: 25px;
+
+            &_title {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            &_value {
+
+                * {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    &__btns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 320px;
+
+        &_btn {
+            width: 100%;
+        }
+    }
+}
