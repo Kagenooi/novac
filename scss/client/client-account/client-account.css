@@ -112,6 +112,75 @@ label {
   display: block;
 }
 
+body {
+  background: #F1F1F1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 120px auto;
+}
+
+.header {
+  padding: 30px;
+  padding-right: 150px;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__btns {
+  display: flex;
+  gap: 30px;
+}
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header__controls_not_btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.header__controls_not_btn_icon {
+  width: 40px;
+  height: 40px;
+}
+.header__controls_not_btn_much {
+  display: block;
+  padding: 4px;
+  background: #32AC70;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  line-height: 1;
+}
+.header__controls_user {
+  width: 60px;
+  height: 60px;
+}
+.header__controls_user_btn {
+  width: 100%;
+  height: 100%;
+}
+.header__controls_user_btn_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 .textBtn, .outlineBtn, .secondaryBtn, .primaryBtn {
   display: flex;
   align-items: center;
@@ -874,109 +943,58 @@ label {
   width: 100%;
 }
 
-body {
-  background: #F1F1F1;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 120px auto;
-}
-
-.header {
-  padding: 30px;
-  padding-right: 150px;
-}
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header__btns {
-  display: flex;
-  gap: 30px;
-}
-.header__controls {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.header__controls_not_btn {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
-.header__controls_not_btn_icon {
-  width: 40px;
-  height: 40px;
-}
-.header__controls_not_btn_much {
-  display: block;
-  padding: 4px;
-  background: #32AC70;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  color: #fff;
-  font-weight: 500;
-  top: 0;
-  right: 0;
-  font-size: 14px;
-  line-height: 1;
-}
-.header__controls_user {
-  width: 60px;
-  height: 60px;
-}
-.header__controls_user_btn {
-  width: 100%;
-  height: 100%;
-}
-.header__controls_user_btn_img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
 .main {
   padding: 0px 150px 30px 30px;
 }
 
-.list__header {
-  border-radius: 15px 15px 0 0;
-  background: #E8EAEC;
-  padding: 12px 40px 12px 24px;
+table {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+tr {
+  height: 60px;
+  background: none;
+}
+tr.table__header {
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1450980392);
-  position: relative;
-  z-index: 1020;
+  background: #E8EAEC;
+  border-radius: 15px 15px 0 0;
 }
-.list__header_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr 325px;
-  gap: 20px;
+tr.table__header th:first-child {
+  border-radius: 15px 0 0;
 }
-.list__header_wrapper * {
-  text-align: center;
-  font-size: 24px;
+tr.table__header th:last-child {
+  border-radius: 0 15px 0 0;
 }
-.list__wrapper {
-  padding: 20px;
-  background: #fff;
+tr.table__item {
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1450980392);
+}
+tr:last-child {
   border-radius: 0 0 15px 15px;
-  position: relative;
-  z-index: 1010;
-  overflow-y: auto;
 }
+
+th,
+td {
+  text-align: center;
+}
+th img,
+td img {
+  margin: 0 auto;
+}
+
 .list__scrolled {
   min-height: -moz-fit-content;
   min-height: fit-content;
   display: grid;
-  grid-gap: 12px;
+  background: #fff;
+  border-radius: 15px;
+}
+.list__scrolled table {
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 .list__item {
   display: grid;
@@ -1006,8 +1024,9 @@ body {
 }
 .list__item_btn {
   gap: 8px;
-  max-width: 325px;
-  margin-left: auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 .list__item_btn_txt {
   color: #fff;

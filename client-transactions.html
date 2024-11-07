@@ -18,13 +18,13 @@
                     </a>
                     <ul class="navbar__menu">
                         <li>
-                            <a href="client-account.html" class="navbar__menu_link active">
+                            <a href="client-account.html" class="navbar__menu_link">
                                 <img src="images/homeIcon.svg" alt="" class="navbar__menu_link_icon">
                                 <span class="navbar__menu_link_txt">Главная</span>
                             </a>
                         </li>
                         <li>
-                            <a href="client-transactions.html" class="navbar__menu_link">
+                            <a href="client-transactions.html" class="navbar__menu_link active">
                                 <img src="images/transactionIcon.svg" alt="" class="navbar__menu_link_icon">
                                 <span class="navbar__menu_link_txt">Транзакции</span>
                             </a>
@@ -69,11 +69,544 @@
             </header>
 
             <div class="main">
-                
+                <div class="main__wrapper">
+                    <div class="list">
+                        <div class="list__wrapper">
+                            <div class="list__scrolled">
+                                <table>
+                                    <tr class="table__header">
+                                        <th colspan="3">Номер сделки</th>
+                                        <th colspan="1">Вход</th>
+                                        <th colspan="1"></th>
+                                        <th colspan="1">Выход</th>
+                                        <th colspan="4">Сумма сделки</th>
+                                        <th colspan="4">Комиссия</th>
+                                        <th colspan="2">Статус</th>
+                                        <th colspan="3">Дата создания</th>
+                                        <th colspan="3"></th>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__item">
+                                        <td colspan="3"><p class="list__item_pr commission">#001</p></td>
+                                        <td colspan="1"><p class="list__item_currency_pr input">RUB</p></td>
+                                        <td colspan="1"><img src="images/arrow-right.svg" alt="" class="list__item_currency_arrow"></td>
+                                        <td colspan="1"><p class="list__item_currency_pr output">USD</p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="4"><p class="list__item_pr summ">10,000$ / <span class="limit__rub">1,000,000₽</span></p></td>
+                                        <td colspan="2"><p class="list__item_pr">В процессе</p></td>
+                                        <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
+                                        <td colspan="3">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                                <span class="list__item_btn_txt">Детали</span>
+                                                <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- transaction modal -->
+
+            <div class="modal" id="transaction">
+                <div class="modal__wrapper md">
+                    <form action="">
+                        <div class="transaction">
+                            <button type="button" class="transaction__closeBtn" onclick="toggleActive('transaction')">
+                                <img src="images/closeBtnIcon.svg" alt="" class="transaction__closeBtn_icon">
+                            </button>
+                            <div class="transaction__wrapper">
+                                <div class="transaction__steps">
+                                    <p class="transaction__steps_title active">Шаг 1</p>
+                                    <p class="transaction__steps_title">Шаг 2</p>
+                                    <p class="transaction__steps_title">Шаг 3</p>
+                                </div>
+                                <div class="transaction__tabs">
+                                    <div class="transaction__tabs_item active">
+                                        <div class="transaction__tabs_item_scrolled">
+                                            <h2 class="secondary">Детали транзакции</h2>
+                                            <div class="transaction__tabs_item_wrapper form">
+                                                <label class="addFile">
+                                                    <div class="addFile__header">
+                                                        <p class="addFile__header_title">Торговый контракт<span class="addFile__header_title_required">*</span></p>
+                                                        <span class="addFile__header_tooltip">
+                                                            <img src="images/tooltipIcon.svg" alt="" class="addFile__header_tooltip_icon">
+                                                            <span class="addFile__header_tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class="addFile__fakeBtn primaryBtn">
+                                                        <img src="images/load.svg" alt="" class="primaryBtn__icon">
+                                                        <span class="addFile__fakeBtn_txt">Загрузить</span>
+                                                    </p>
+                                                    <input type="file" name="" class="addFile__inp inputFile">
+                                                    <div class="addFile__inner">
+                                                        <img src="images/icon-attachment.svg" alt="" class="addFile__inner_icon">
+                                                        <span class="addFile__inner_txt fakeText" data-defaultText="Файл не выбран">Файл не выбран</span>
+                                                        <button type="button" class="addFile__inner_btn clearFile">
+                                                            <img src="images/deleteFile.svg" alt="" class="addFile__inner_btn_icon">
+                                                        </button>
+                                                    </div>
+                                                </label>
+                                                <label class="addFile">
+                                                    <div class="addFile__header">
+                                                        <p class="addFile__header_title">Инвойс<span class="addFile__header_title_required">*</span></p>
+                                                        <span class="addFile__header_tooltip">
+                                                            <img src="images/tooltipIcon.svg" alt="" class="addFile__header_tooltip_icon">
+                                                            <span class="addFile__header_tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class="addFile__fakeBtn primaryBtn">
+                                                        <img src="images/load.svg" alt="" class="primaryBtn__icon">
+                                                        <span class="addFile__fakeBtn_txt">Загрузить</span>
+                                                    </p>
+                                                    <input type="file" name="" class="addFile__inp inputFile">
+                                                    <div class="addFile__inner">
+                                                        <img src="images/icon-attachment.svg" alt="" class="addFile__inner_icon">
+                                                        <span class="addFile__inner_txt fakeText" data-defaultText="Файл не выбран">Файл не выбран</span>
+                                                        <button type="button" class="addFile__inner_btn clearFile">
+                                                            <img src="images/deleteFile.svg" alt="" class="addFile__inner_btn_icon">
+                                                        </button>
+                                                    </div>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="transaction__tabs_item">
+                                        <div class="transaction__tabs_item_wrapper_scrolled">
+                                            <h2 class="secondary">Ваши реквизиты</h2>
+                                            <div class="transaction__tabs_item_wrapper form">
+                                                <div class="dropdown">
+                                                    <button type="button" class="dropdown__btn" onclick="toggleActive('selectDropdown')">
+                                                        <span class="dropdown__btn_txt" id="selectedText">Выбрать компанию</span>
+                                                        <img src="images/arrow-down.svg" alt="" class="dropdown__btn_icon">
+                                                    </button>
+                                                    <div class="dropdown__wrapper" id="selectDropdown">
+                                                        <button type="button" class="dropdown__option" id="defaultOption" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                    </div>
+                                                </div>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label class="addFile">
+                                                    <div class="addFile__header">
+                                                        <p class="addFile__header_title">Торговый контракт<span class="addFile__header_title_required">*</span></p>
+                                                        <span class="addFile__header_tooltip">
+                                                            <img src="images/tooltipIcon.svg" alt="" class="addFile__header_tooltip_icon">
+                                                            <span class="addFile__header_tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class="addFile__fakeBtn primaryBtn">
+                                                        <img src="images/load.svg" alt="" class="primaryBtn__icon">
+                                                        <span class="addFile__fakeBtn_txt">Загрузить</span>
+                                                    </p>
+                                                    <input type="file" name="" class="addFile__inp inputFile">
+                                                    <div class="addFile__inner">
+                                                        <img src="images/icon-attachment.svg" alt="" class="addFile__inner_icon">
+                                                        <span class="addFile__inner_txt fakeText" data-defaultText="Файл не выбран">Файл не выбран</span>
+                                                        <button type="button" class="addFile__inner_btn clearFile">
+                                                            <img src="images/deleteFile.svg" alt="" class="addFile__inner_btn_icon">
+                                                        </button>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="transaction__tabs_item">
+                                        <div class="transaction__tabs_item_wrapper_scrolled">
+                                            <h2 class="secondary">Данные контрагента</h2>
+                                            <div class="transaction__tabs_item_header">
+                                                <div class="dropdown disabled">
+                                                    <button type="button" class="dropdown__btn" onclick="toggleActive('selectDropdown')">
+                                                        <span class="dropdown__btn_txt" id="selectedText">Выбрать компанию</span>
+                                                        <img src="images/arrow-down.svg" alt="" class="dropdown__btn_icon">
+                                                    </button>
+                                                    <div class="dropdown__wrapper" id="selectDropdown">
+                                                        <button type="button" class="dropdown__option" id="defaultOption" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                        <button type="button" class="dropdown__option" onclick="chooseOption(this, 'selectedText')">ООО Консульт груп</button>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="primaryBtn disabled">Создать контрагента</button>
+                                            </div>
+                                            <div class="transaction__tabs_item_wrapper form">
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label for="" class="fieldDefault">
+                                                    <span class="fieldDefault__title placeholder">Название компании <span class="fieldDefault__title_required"> *</span></span>
+                                                    <input type="text" class="fieldDefault__inp input">
+                                                    <span class="fieldDefault__status">
+                                                        <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                                        <span class="fieldDefault__status_txt"></span>
+                                                    </span>
+                                                    <span class="fieldDefault__tooltip">
+                                                        <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                                        <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                    </span>
+                                                </label>
+                                                <label class="addFile">
+                                                    <div class="addFile__header">
+                                                        <p class="addFile__header_title">Торговый контракт<span class="addFile__header_title_required">*</span></p>
+                                                        <span class="addFile__header_tooltip">
+                                                            <img src="images/tooltipIcon.svg" alt="" class="addFile__header_tooltip_icon">
+                                                            <span class="addFile__header_tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class="addFile__fakeBtn primaryBtn">
+                                                        <img src="images/load.svg" alt="" class="primaryBtn__icon">
+                                                        <span class="addFile__fakeBtn_txt">Загрузить</span>
+                                                    </p>
+                                                    <input type="file" name="" class="addFile__inp inputFile">
+                                                    <div class="addFile__inner">
+                                                        <img src="images/icon-attachment.svg" alt="" class="addFile__inner_icon">
+                                                        <span class="addFile__inner_txt fakeText" data-defaultText="Файл не выбран">Файл не выбран</span>
+                                                        <button type="button" class="addFile__inner_btn clearFile">
+                                                            <img src="images/deleteFile.svg" alt="" class="addFile__inner_btn_icon">
+                                                        </button>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transaction__footer">
+                                    <div class="transaction__info">
+                                        <div class="transaction__info_details">
+                                            <div class="transaction__info_details_el">
+                                                <p class="transaction__info_details_el_key">Сумма сделки:</p>
+                                                <p class="transaction__info_details_el_value">
+                                                    <span class="transaction__info_details_el_value_summ">0,00</span>
+                                                    <span class="transaction__info_details_el_value_currency">AED</span>
+                                                </p>
+                                            </div>
+                                            <div class="transaction__info_details_el">
+                                                <p class="transaction__info_details_el_key">Комиссия:</p>
+                                                <p class="transaction__info_details_el_value">
+                                                    <span class="transaction__info_details_el_value_currency entrance">
+                                                        <span class="transaction__info_details_el_value_currency_summ">0,00</span>
+                                                        <span class="transaction__info_details_el_value_currency_name">AED</span>
+                                                    </span>
+                                                    /
+                                                    <span class="transaction__info_details_el_value_currency output">
+                                                        <span class="transaction__info_details_el_value_currency_summ">0,00</span>
+                                                        <span class="transaction__info_details_el_value_currency_name">RUB</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="transaction__info_details_el">
+                                                <p class="transaction__info_details_el_key">Курс:</p>
+                                                <p class="transaction__info_details_el_value">
+                                                    <span class="transaction__info_details_el_value_currency entrance">
+                                                        <span class="transaction__info_details_el_value_currency_summ">0,00</span>
+                                                        <span class="transaction__info_details_el_value_currency_name">AED</span>
+                                                    </span>
+                                                    /
+                                                    <span class="transaction__info_details_el_value_currency output">
+                                                        <span class="transaction__info_details_el_value_currency_name">RUB</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction__info_total">
+                                            <p class="transaction__info_total_title">Итого:</p>
+                                            <p class="transaction__info_total_value">
+                                                <span class="transaction__info_total_value_summ">0,00</span>
+                                                <span class="transaction__info_total_value_currency">RUB</span>
+                                            </p>
+                                        </div>
+                                    </div>  
+                                    <div class="transaction__btns">
+                                        <button type="button" class="transaction__btns_btn secondaryBtn" id="transPrev" data-index="0">Назад</button>
+                                        <button type="button" class="transaction__btns_btn primaryBtn" id="transNext" data-index="0">Дальше</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
 
     </div>
+
+    <script type="module" src="js/client/client-transactions.js"></script>
 </body>
 </html>
