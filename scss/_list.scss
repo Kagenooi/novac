@@ -1,5 +1,9 @@
 .main {
     padding: 0px 150px 30px 30px;
+
+    @media (max-width: 1440px) {
+        padding: 0 30px 30px;
+    }
 }
 
 table {

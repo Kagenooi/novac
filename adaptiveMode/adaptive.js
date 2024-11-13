@@ -1,13 +1,13 @@
 export function adaptive() {
     const wrapper = document.querySelector('#adaptive');
     let zoom = document.body.clientWidth / 19.2 / 100;
-    if (document.body.clientWidth > 1380 && document.body.clientWidth < 1580) {
+    if (document.body.clientWidth > 1380 && document.body.clientWidth < 1440) {
         zoom = document.body.clientWidth / 14.4 / 100;
     }
-    if (document.body.clientWidth > 1080 && document.body.clientWidth < 1380) {
-        zoom = document.body.clientWidth / 13.8 / 100;
+    if (document.body.clientWidth > 980 && document.body.clientWidth < 1280) {
+        zoom = document.body.clientWidth / 12.8 / 100;
     }
-    if (document.body.clientWidth > 520 && document.body.clientWidth < 1081) {
+    if (document.body.clientWidth > 520 && document.body.clientWidth < 981) {
         zoom = document.body.clientWidth / 7.68 / 100;
     }
     if (document.body.clientWidth < 521) {

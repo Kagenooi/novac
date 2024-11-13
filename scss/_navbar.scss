@@ -4,9 +4,16 @@
     padding: 60px 30px;
     grid-row: 1 / 3;
 
+    @media (max-width: 1440px) {
+        padding: 40px 15px;
+    }
     &__logo {
         padding-bottom: 80px;
         border-bottom: 1px solid #2E3354;
+
+        &_img {
+            width: 100%;
+        }
     }
 
     &__menu {
@@ -29,11 +36,20 @@
             &_txt {
                 color: #fff;
                 font-size: 24px;
+
+                @media (max-width: 1440px) {
+                    font-size: 20px;
+                }
             }
 
             &_icon {
                 width: 40px;
                 height: 40px;
+
+                @media (max-width: 1440px) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }
