@@ -144,7 +144,7 @@ body {
   display: flex;
   align-items: center;
   border-radius: 4px;
-  border: 1px solid #32AC70;
+  border: 3px solid #32AC70;
   background: #32AC70;
   gap: 4px;
 }
@@ -155,17 +155,17 @@ body {
   color: #fff;
 }
 .header__btns_helpCenter_link {
-  width: 48px;
-  height: 40px;
-  padding: 6px;
+  width: 42px;
+  height: 36px;
+  padding: 3px;
   border-radius: 3px;
+  background: #0B8248;
 }
 .header__btns_helpCenter_link:hover {
   background: #098E4D;
 }
 .header__btns_helpCenter_link:active {
-  border-color: #8CCAAB;
-  background: #0B8248;
+  background: #8CCAAB;
 }
 .header__btns_helpCenter_link_icon {
   width: 100%;
