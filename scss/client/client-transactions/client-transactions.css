@@ -955,13 +955,19 @@ body {
 .orderDetails__status {
   display: flex;
   justify-content: space-between;
-  grid-gap: 20px;
+  grid-gap: 40px;
   margin-bottom: 20px;
 }
 .orderDetails__status_el {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0.3;
+  width: 110px;
+  min-width: 110px;
+}
+.orderDetails__status_el.active {
+  opacity: 1;
 }
 .orderDetails__status_el_name {
   display: block;
@@ -971,7 +977,21 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #c4c4c4;
+  position: relative;
+}
+.orderDetails__status_el_candle::before {
+  content: "";
+  display: block;
+  width: 132px;
+  height: 2px;
+  background: #c4c4c4;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+}
+.orderDetails__status_el:last-child .orderDetails__status_el_candle::before {
+  display: none;
 }
 .orderDetails__info {
   padding: 20px 15px;

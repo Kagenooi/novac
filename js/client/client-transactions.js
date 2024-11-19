@@ -40,3 +40,9 @@ for (let i = 0; i < orderDetailsBtns.length; i++) {
     })
 }
 document.querySelector('#defaultTab').click();
+
+const orderStatusWrapper = document.querySelector('.orderDetails__status');
+const orderStatusEl = orderStatusWrapper.querySelectorAll('.orderDetails__status_el_name');
+for (let i = 0; i < orderStatusEl.length; i++) {
+    orderStatusEl[i].nextElementSibling.style.background = orderStatusEl[i].dataset.bg;
+}
