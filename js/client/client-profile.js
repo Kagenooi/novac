@@ -98,3 +98,8 @@ cancelChangesBtn.addEventListener('click', function () {
     userData.querySelector('.profile__details_user_wrapper').style.opacity = '.5';
     setDisabled();
 })
+
+
+const emailInp = document.querySelector('#email');
+emailInp?.setAttribute('disabled', '');
+emailInp?.classList.add('inactive');

@@ -620,6 +620,10 @@ body {
   display: none;
 }
 
+#email.inactive {
+  pointer-events: none;
+}
+
 .phone {
   display: flex;
   position: relative;

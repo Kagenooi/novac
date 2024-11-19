@@ -401,6 +401,12 @@
     }
 }
 
+#email {
+
+    &.inactive {
+        pointer-events: none;   
+    }
+}
 
 .phone {
     display: flex;
