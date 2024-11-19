@@ -926,6 +926,7 @@ body {
   background: #fff;
   border-radius: 0 0 20px 20px;
   padding: 40px;
+  max-height: 95%;
 }
 .modal__wrapper.lg {
   max-width: 60%;
@@ -937,115 +938,163 @@ body {
   max-width: 40%;
 }
 
-.transaction {
-  width: 100%;
+.orderDetails {
   position: relative;
-}
-.transaction .primaryBtn {
   width: 100%;
 }
-.transaction__closeBtn {
+.orderDetails__closeBtn {
   position: absolute;
-  top: -35px;
+  top: -70px;
   right: -70px;
 }
-.transaction__steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: -80px;
-  margin-left: -40px;
-  border-radius: 20px 20px 0 0;
-  width: calc(100% + 80px);
+.orderDetails__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
-.transaction__steps_title {
-  padding: 12px;
-  font-size: 22px;
-  text-align: center;
-  font-weight: 600;
-  border-radius: 20px 20px 0 0;
-  background: #E8EAEC;
-  transition: 0.3s;
+.orderDetails__status {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 20px;
+  margin-bottom: 20px;
 }
-.transaction__steps_title.active {
-  color: #fff;
-  background: #2E9B69;
-  transition: 0.3s;
+.orderDetails__status_el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.transaction__tabs {
-  padding: 20px 0 0;
-}
-.transaction__tabs_item {
-  display: none;
-}
-.transaction__tabs_item.active {
+.orderDetails__status_el_name {
   display: block;
+  margin-bottom: 10px;
 }
-.transaction__tabs_item_header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 25px;
-  margin: 20px 0;
-  grid-column: 1/3;
+.orderDetails__status_el_candle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #c4c4c4;
 }
-.transaction__tabs_item .form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 25px;
+.orderDetails__info {
+  padding: 20px 15px;
+  border-radius: 20px;
+  border: 1px solid #DFDFDF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  margin-bottom: 30px;
 }
-.transaction__tabs_item .form.disabled * {
-  cursor: not-allowed !important;
-  opacity: 0.5;
+.orderDetails__info_btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-.transaction__info {
+.orderDetails__info_btns_btn {
+  padding: 5px 10px;
+  background: rgba(161, 164, 189, 0.1882352941);
+  font-family: Wix Madefor Display;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.orderDetails__info_btns_btn:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.orderDetails__info_btns_btn:last-child {
+  border-radius: 0 20px 20px 0;
+}
+.orderDetails__info_btns_btn.active, .orderDetails__info_btns_btn:hover {
+  background: #32AC70;
+  color: #fff;
+  transition: 0.3s;
+}
+.orderDetails__info_tab {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  padding: 20px 20px 0;
+  max-height: 410px;
+  overflow: hidden;
+}
+.orderDetails__info_tab.active {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+.orderDetails__info_tab table {
+  margin-top: -20px;
+}
+.orderDetails__info_tab table tr {
+  height: 30px;
+}
+.orderDetails__info_tab table tr td {
+  text-align: left;
+}
+.orderDetails__info_tab_item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.orderDetails__info_tab_item_title {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.orderDetails__info_tab_item_link {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #32AC70;
+  transition: 0.3s;
+}
+.orderDetails__info_tab_item_link:hover {
+  color: #0B8248;
+  transition: 0.3s;
+}
+.orderDetails__sum {
+  padding: 20px 15px;
+  border-radius: 20px;
+  border: 1px solid #DFDFDF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.orderDetails__sum_title {
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.orderDetails__sum_wrapper {
   display: flex;
   align-items: center;
 }
-.transaction__info_details {
+.orderDetails__sum_wrapper_details {
   display: grid;
   gap: 6px;
   border-right: 1px solid rgba(96, 96, 96, 0.3137254902);
   padding-right: 25px;
 }
-.transaction__info_details_el {
+.orderDetails__sum_wrapper_details_el {
   display: grid;
   grid-template-columns: 120px 1fr;
   align-items: center;
   width: 100%;
   gap: 20px;
 }
-.transaction__info_details_el * {
+.orderDetails__sum_wrapper_details_el * {
   white-space: nowrap;
 }
-.transaction__info_total {
+.orderDetails__sum_wrapper_total {
   display: grid;
   grid-gap: 6px;
   padding-left: 25px;
 }
-.transaction__info_total_title {
+.orderDetails__sum_wrapper_total_title {
   font-size: 16px;
   font-weight: 600;
 }
-.transaction__info_total_value * {
+.orderDetails__sum_wrapper_total_value * {
   font-size: 20px;
   font-weight: 600;
-}
-.transaction__footer {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 30px;
-}
-.transaction__btns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 320px;
-}
-.transaction__btns_btn {
-  width: 100%;
 }
 
 .main {
@@ -1144,4 +1193,8 @@ td img {
 .list__item_btn_icon {
   width: 8px;
   height: 20px;
+}
+
+.modal__wrapper {
+  border-radius: 20px;
 }/*# sourceMappingURL=client-transactions.css.map */

@@ -3,5 +3,13 @@
 @import '../../kit';
 @import '../../navbar';
 @import '../../modal';
-@import '../../transaction';
+@import '../../orderDetails';
 @import '../../list';
+
+
+.modal {
+
+    &__wrapper {
+        border-radius: 20px;
+    }
+}

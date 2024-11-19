@@ -103,7 +103,7 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
@@ -119,7 +119,7 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
@@ -135,7 +135,7 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
@@ -151,7 +151,7 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
@@ -167,7 +167,7 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
@@ -183,7 +183,7 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
@@ -199,13 +199,191 @@
                                         <td colspan="2"><p class="list__item_pr">В процессе</p></td>
                                         <td colspan="3"><p class="list__item_pr">25 Ноября 2024</p></td>
                                         <td colspan="3">
-                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('')">
+                                            <button type="button" class="list__item_btn primaryBtn" onclick="toggleActive('orderDetails')">
                                                 <span class="list__item_btn_txt">Детали</span>
                                                 <img src="images/white-arrow-right.svg" alt="" class="list__item_btn_icon">
                                             </button>
                                         </td>
                                     </tr>
                                 </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+
+            <div class="modal active" id="orderDetails">
+                <div class="modal__wrapper md">
+                    <div class="orderDetails">
+                        <button type="button" class="orderDetails__closeBtn" onclick="toggleActive('orderDetails')">
+                            <img src="images/closeBtnIcon.svg" alt="" class="orderDetails__closeBtn_icon">
+                        </button>
+                        <div class="orderDetails__wrapper">
+                            <h2 class="orderDetails__title">Транзакция #6236</h2>
+                            <div class="orderDetails__status">
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name">Не обработан</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name">В обработке</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name">Обработан</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name">В работе</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name">Подтверждается</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name">Успешно</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                            </div>
+                            <div class="orderDetails__info">
+                                <div class="orderDetails__info_btns">
+                                    <button type="button" class="orderDetails__info_btns_btn" data-tab="contragent" id="defaultTab">Контрагент</button>
+                                    <button type="button" class="orderDetails__info_btns_btn" data-tab="requisites">Реквизиты</button>
+                                    <button type="button" class="orderDetails__info_btns_btn" data-tab="transactionDocs">Документы транзакции</button>
+                                </div>
+                                <div class="orderDetails__info_tab" id="contragent">
+                                    <table>
+                                        <tr>
+                                            <td>Название контрагента</td>
+                                            <td>OOO Tech insurans</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес</td>
+                                            <td>Армения, 2502, ул. Агаси Ханджяна 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Страна регистрации</td>
+                                            <td>Армения</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ИНН</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SWIFT</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IBAN</td>
+                                            <td>GB29NWBK60161331926819</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Название банка</td>
+                                            <td>ЗАО Сбербанк</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес банка</td>
+                                            <td>г. Москва, Пресненская набережная, д. 10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="orderDetails__info_tab" id="requisites">
+                                    <table>
+                                        <tr>
+                                            <td>Название контрагента</td>
+                                            <td>OOO Tech insurans</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес</td>
+                                            <td>Армения, 2502, ул. Агаси Ханджяна 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Страна регистрации</td>
+                                            <td>Армения</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ИНН</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SWIFT</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IBAN</td>
+                                            <td>GB29NWBK60161331926819</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Название банка</td>
+                                            <td>ЗАО Сбербанк</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес банка</td>
+                                            <td>г. Москва, Пресненская набережная, д. 10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="orderDetails__info_tab" id="transactionDocs">
+                                    <div class="orderDetails__info_tab_item">
+                                        <h3 class="orderDetails__info_tab_item_title">Торговый контракт</h3>
+                                        <a href="" class="orderDetails__info_tab_item_link">https://springridgeclubs.com/online-casinos-an-introduction/</a>
+                                    </div>
+                                    <div class="orderDetails__info_tab_item">
+                                        <h3 class="orderDetails__info_tab_item_title">Торговый контракт</h3>
+                                        <a href="" class="orderDetails__info_tab_item_link">https://springridgeclubs.com/online-casinos-an-introduction/</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderDetails__sum">
+                                <h2 class="orderDetails__sum_title">Сумма</h2>
+                                <div class="orderDetails__sum_wrapper">
+                                    <div class="orderDetails__sum_wrapper_details">
+                                        <div class="orderDetails__sum_wrapper_details_el">
+                                            <p class="orderDetails__sum_wrapper_details_el_key">Сумма сделки:</p>
+                                            <p class="orderDetails__sum_wrapper_details_el_value">
+                                                <span class="orderDetails__sum_wrapper_details_el_value_summ">0,00</span>
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency">AED</span>
+                                            </p>
+                                        </div>
+                                        <div class="orderDetails__sum_wrapper_details_el">
+                                            <p class="orderDetails__sum_wrapper_details_el_key">Комиссия:</p>
+                                            <p class="orderDetails__sum_wrapper_details_el_value">
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency entrance">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_summ">0,00</span>
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">AED</span>
+                                                </span>
+                                                /
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency output">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_summ">0,00</span>
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">RUB</span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="orderDetails__sum_wrapper_details_el">
+                                            <p class="orderDetails__sum_wrapper_details_el_key">Курс:</p>
+                                            <p class="orderDetails__sum_wrapper_details_el_value">
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency entrance">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_summ">0,00</span>
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">AED</span>
+                                                </span>
+                                                /
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency output">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">RUB</span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="orderDetails__sum_wrapper_total">
+                                        <p class="orderDetails__sum_wrapper_total_title">Итого:</p>
+                                        <p class="orderDetails__sum_wrapper_total_value">
+                                            <span class="orderDetails__sum_wrapper_total_value_summ">0,00</span>
+                                            <span class="orderDetails__sum_wrapper_total_value_currency">RUB</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
