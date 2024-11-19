@@ -256,6 +256,7 @@
     border-color: #9397B6;
     border-style: solid;
     border-radius: 6px;
+    position: relative;
 
     &__title {
         display: flex;
@@ -271,6 +272,10 @@
 
         &_required {
             color: #DA1414;
+        }
+
+        &.none {
+            display: none;
         }
 
         &.active {
@@ -369,6 +374,30 @@
             visibility: visible;
             opacity: 1;
         }
+    }
+
+    &__editBtn {
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+.changesSave {
+    display: none;
+
+    &.active {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.changeData {
+    display: block;
+
+    &.inactive {
+        display: none;
     }
 }
 

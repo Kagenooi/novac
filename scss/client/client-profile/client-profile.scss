@@ -108,6 +108,7 @@
             gap: 40px;
             padding: 30px 20px;
         }
+
         &_user,
         &_company {
             display: grid;
@@ -122,6 +123,54 @@
                     font-size: 24px;
                 }
             }
+
+            &_wrapper {
+                display: grid;
+                grid-gap: 25px;
+
+                &.inactive {
+                    * {
+                        pointer-events: none;   
+                    }
+                }
+            }
         }
+    }
+}
+
+#changePassowrd {
+    >div {
+        max-width: 480px;
+        border-radius: 20px;
+    }
+}
+
+.changePassword {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+
+    &__closeBtn {
+        position: absolute;
+        top: -70px;
+        right: -70px;
+    }
+
+    &__btns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+
+        &_btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-family: Wix Madefor Display;
+        font-size: 24px;
+        font-weight: 700;
     }
 }

@@ -441,6 +441,7 @@ body {
   border-color: #9397B6;
   border-style: solid;
   border-radius: 6px;
+  position: relative;
 }
 .fieldDefault__title {
   display: flex;
@@ -456,6 +457,9 @@ body {
 }
 .fieldDefault__title_required {
   color: #DA1414;
+}
+.fieldDefault__title.none {
+  display: none;
 }
 .fieldDefault__title.active {
   top: -10px;
@@ -540,6 +544,27 @@ body {
 .fieldDefault__tooltip:hover .fieldDefault__tooltip_content {
   visibility: visible;
   opacity: 1;
+}
+.fieldDefault__editBtn {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.changesSave {
+  display: none;
+}
+.changesSave.active {
+  display: flex;
+  gap: 20px;
+}
+
+.changeData {
+  display: block;
+}
+.changeData.inactive {
+  display: none;
 }
 
 .phone {
@@ -1162,4 +1187,42 @@ body {
   .profile__details_user_title, .profile__details_company_title {
     font-size: 24px;
   }
+}
+.profile__details_user_wrapper, .profile__details_company_wrapper {
+  display: grid;
+  grid-gap: 25px;
+}
+.profile__details_user_wrapper.inactive *, .profile__details_company_wrapper.inactive * {
+  pointer-events: none;
+}
+
+#changePassowrd > div {
+  max-width: 480px;
+  border-radius: 20px;
+}
+
+.changePassword {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+}
+.changePassword__closeBtn {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+}
+.changePassword__btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+.changePassword__btns_btn {
+  width: 100%;
+  text-align: center;
+}
+.changePassword__title {
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
 }/*# sourceMappingURL=client-profile.css.map */

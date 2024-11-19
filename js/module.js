@@ -89,11 +89,24 @@ export function accordion() {
     for (let i = 0; i < acc.length; i++) {
         let accBtn = acc[i].querySelector('.accordion__btn');
         let accWrapper = acc[i].querySelector('.accordion__wrapper');
-        accBtn.addEventListener('click', function() {
+        accBtn.addEventListener('click', function () {
             if (accWrapper.style.maxHeight) {
                 accWrapper.style.maxHeight = null;
             } else {
                 accWrapper.style.maxHeight = accWrapper.style.maxHeight + accWrapper.scrollHeight + 'px';
+            }
+        })
+    }
+}
+
+export function showPossword() {
+    const showToggle = document.querySelectorAll('.password__showHide');
+    for (let i = 0; i < showToggle.length; i++) {
+        showToggle[i].addEventListener('click', function () {
+            if (this.parentNode.querySelector('input').getAttribute('type') != 'password') {
+                this.parentNode.querySelector('input').setAttribute('type', 'password');
+            } else {
+                this.parentNode.querySelector('input').setAttribute('type', 'text');
             }
         })
     }

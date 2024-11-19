@@ -441,6 +441,7 @@ body {
   border-color: #9397B6;
   border-style: solid;
   border-radius: 6px;
+  position: relative;
 }
 .fieldDefault__title {
   display: flex;
@@ -456,6 +457,9 @@ body {
 }
 .fieldDefault__title_required {
   color: #DA1414;
+}
+.fieldDefault__title.none {
+  display: none;
 }
 .fieldDefault__title.active {
   top: -10px;
@@ -540,6 +544,27 @@ body {
 .fieldDefault__tooltip:hover .fieldDefault__tooltip_content {
   visibility: visible;
   opacity: 1;
+}
+.fieldDefault__editBtn {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.changesSave {
+  display: none;
+}
+.changesSave.active {
+  display: flex;
+  gap: 20px;
+}
+
+.changeData {
+  display: block;
+}
+.changeData.inactive {
+  display: none;
 }
 
 .phone {
