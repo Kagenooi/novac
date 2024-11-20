@@ -219,6 +219,39 @@ body {
   border-radius: 50%;
 }
 
+#createContragent > div {
+  max-width: 980px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.createContragent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+.createContragent .primaryBtn {
+  width: 100%;
+}
+.createContragent__title {
+  grid-column: 1/3;
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.createContragent__closeBtn {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+}
+.createContragent__btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 25px;
+}
+
 .textBtn, .outlineBtn, .secondaryBtn, .primaryBtn {
   display: flex;
   align-items: center;
@@ -944,14 +977,10 @@ body {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 1090;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s;
+  display: none;
 }
 .modal.active {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.3s;
+  display: flex;
 }
 .modal__wrapper {
   width: 100%;
@@ -1169,6 +1198,125 @@ body {
 .orderDetails__sum_wrapper_total_value * {
   font-size: 20px;
   font-weight: 600;
+}
+
+.transaction {
+  width: 100%;
+  position: relative;
+}
+.transaction .primaryBtn {
+  width: 100%;
+}
+.transaction__closeBtn {
+  position: absolute;
+  top: -35px;
+  right: -70px;
+}
+.transaction__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: -80px;
+  margin-left: -40px;
+  border-radius: 20px 20px 0 0;
+  width: calc(100% + 80px);
+}
+.transaction__steps_title {
+  padding: 12px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 20px 20px 0 0;
+  background: #E8EAEC;
+  transition: 0.3s;
+}
+.transaction__steps_title.active {
+  color: #fff;
+  background: #2E9B69;
+  transition: 0.3s;
+}
+.transaction__tabs {
+  padding: 20px 0 0;
+}
+.transaction__tabs .dropdown.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.transaction__tabs .dropdown.disabled * {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.transaction__tabs_item {
+  display: none;
+}
+.transaction__tabs_item.active {
+  display: block;
+}
+.transaction__tabs_item_header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  margin: 25px 0;
+  grid-column: 1/3;
+}
+.transaction__tabs_item .form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+.transaction__tabs_item .form.disabled * {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+.transaction__info {
+  display: flex;
+  align-items: center;
+}
+.transaction__info_details {
+  display: grid;
+  gap: 6px;
+  border-right: 1px solid rgba(96, 96, 96, 0.3137254902);
+  padding-right: 25px;
+}
+.transaction__info_details_el {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.transaction__info_details_el * {
+  white-space: nowrap;
+}
+.transaction__info_total {
+  display: grid;
+  grid-gap: 6px;
+  padding-left: 25px;
+}
+.transaction__info_total_title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.transaction__info_total_value * {
+  font-size: 20px;
+  font-weight: 600;
+}
+.transaction__footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+}
+.transaction__btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+.transaction__btns_btn {
+  width: 100%;
 }
 
 .main {

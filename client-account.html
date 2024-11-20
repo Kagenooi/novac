@@ -49,7 +49,7 @@
                 <div class="header__wrapper">
                     <div class="header__btns">
                         <button type="button" class="primaryBtn" onclick="toggleActive('transaction')">Новая транзакция</button>
-                        <button type="button" class="primaryBtn">Создать нового контрагента</button>
+                        <button type="button" class="primaryBtn" onclick="toggleActive('createContragent')">Создать нового контрагента</button>
                         <div class="header__btns_helpCenter">
                             <p class="header__btns_helpCenter_pr">Помощь</p>
                             <a href="" class="header__btns_helpCenter_link">
@@ -211,9 +211,157 @@
             </div>
         </main>
 
+        <!-- create contragent -->
+
+        <div class="modal" id="createContragent">
+            <div class="modal__wrapper">
+                <button type="button" class="createContragent__closeBtn" onclick="toggleActive('createContragent')">
+                    <img src="images/closeBtnIcon.svg" alt="" class="createContragent__closeBtn_icon">
+                </button>
+                <div class="modal__scrolled">
+                    <h2 class="createContragent__title">Создать нового контрагента</h2>
+                    <div class="createContragent">
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">Название контрагента <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">ИНН <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">SWIFT <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">IBAN <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">Валюта счета <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">Адрес <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">Название банка <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">Страна регистрации <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label for="" class="fieldDefault">
+                            <span class="fieldDefault__title placeholder">Адрес банка <span class="fieldDefault__title_required"> *</span></span>
+                            <input type="text" class="fieldDefault__inp input">
+                            <span class="fieldDefault__status">
+                                <img src="images/errorIcon.svg" alt="" class="fieldDefault__status_icon">
+                                <span class="fieldDefault__status_txt"></span>
+                            </span>
+                            <span class="fieldDefault__tooltip">
+                                <img src="images/tooltipIcon.svg" alt="" class="fieldDefault__tooltip_icon">
+                                <span class="fieldDefault__tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                            </span>
+                        </label>
+                        <label class="addFile">
+                            <div class="addFile__header">
+                                <p class="addFile__header_title">Карточка организации<span class="addFile__header_title_required">*</span></p>
+                                <span class="addFile__header_tooltip">
+                                    <img src="images/tooltipIcon.svg" alt="" class="addFile__header_tooltip_icon">
+                                    <span class="addFile__header_tooltip_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quod porro, illum ducimus quo perspiciatis.</span>
+                                </span>
+                            </div>
+                            <p class="addFile__fakeBtn primaryBtn">
+                                <img src="images/load.svg" alt="" class="primaryBtn__icon">
+                                <span class="addFile__fakeBtn_txt">Загрузить</span>
+                            </p>
+                            <input type="file" name="" class="addFile__inp inputFile">
+                            <div class="addFile__inner">
+                                <img src="images/icon-attachment.svg" alt="" class="addFile__inner_icon">
+                                <span class="addFile__inner_txt fakeText" data-defaultText="Файл не выбран">Файл не выбран</span>
+                                <button type="button" class="addFile__inner_btn clearFile">
+                                    <img src="images/deleteFile.svg" alt="" class="addFile__inner_btn_icon">
+                                </button>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="createContragent__btns">
+                        <button type="button" class="secondaryBtn" onclick="toggleActive('createContragent')">Отменить</button>
+                        <button type="button" class="primaryBtn" onclick="toggleActive('createContragent')">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- transaction modal -->
 
-        <div class="modal active" id="transaction">
+        <div class="modal" id="transaction">
             <div class="modal__wrapper md">
                 <form action="">
                     <div class="transaction">

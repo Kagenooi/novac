@@ -219,6 +219,39 @@ body {
   border-radius: 50%;
 }
 
+#createContragent > div {
+  max-width: 980px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.createContragent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+.createContragent .primaryBtn {
+  width: 100%;
+}
+.createContragent__title {
+  grid-column: 1/3;
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.createContragent__closeBtn {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+}
+.createContragent__btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 25px;
+}
+
 .textBtn, .outlineBtn, .secondaryBtn, .primaryBtn {
   display: flex;
   align-items: center;
@@ -944,14 +977,10 @@ body {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 1090;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s;
+  display: none;
 }
 .modal.active {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.3s;
+  display: flex;
 }
 .modal__wrapper {
   width: 100%;
@@ -1246,7 +1275,7 @@ body {
 .changePassword__closeBtn {
   position: absolute;
   top: -70px;
-  right: -70px;
+  right: -35px;
 }
 .changePassword__btns {
   display: grid;
@@ -1261,4 +1290,37 @@ body {
   font-family: Wix Madefor Display;
   font-size: 24px;
   font-weight: 700;
+}
+
+#createCompany > div {
+  max-width: 980px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.createCompany {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+.createCompany .primaryBtn {
+  width: 100%;
+}
+.createCompany__title {
+  grid-column: 1/3;
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.createCompany__closeBtn {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+}
+.createCompany__btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 25px;
 }/*# sourceMappingURL=client-profile.css.map */
