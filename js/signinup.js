@@ -15,6 +15,7 @@ placeholderAnimate();
 window.phoneCodes = phoneCodes;
 phoneCodes();
 
+const selectWrapper = document.querySelector('.phone__select_dropdown_scrolled');
 fetch('https://countriesnow.space/api/v0.1/countries/codes', {
     method: 'GET',
     headers: {
@@ -28,7 +29,6 @@ fetch('https://countriesnow.space/api/v0.1/countries/codes', {
         return response.json();
     })
     .then(data => {
-        const selectWrapper = document.querySelector('.phone__select_dropdown_scrolled');
         const selectCode = document.querySelector('.selectCode');
         let classValue = selectCode.classList;
         let selectCodeInner = selectCode.innerHTML;
@@ -46,8 +46,8 @@ fetch('https://countriesnow.space/api/v0.1/countries/codes', {
             }
             btn.innerHTML = selectCodeInner;
             let btnCode = btn.querySelector('.code');
-            btnCode.innerHTML = phoneCode;
-            
+            btnCode.innerHTML = phoneCode.replaceAll(' ', '');
+
             let btnCountry = btn.querySelector('.country');
             btnCountry.innerHTML = country;
 
@@ -56,10 +56,32 @@ fetch('https://countriesnow.space/api/v0.1/countries/codes', {
 
             selectCode.remove();
         }
+
+        const phoneWrapper = document.querySelector('.phone');
+        const chooseCode = selectWrapper.querySelectorAll('.selectCode');
+        for (let i = 0; i < chooseCode.length; i++) {
+            chooseCode[i].addEventListener('click', function () {
+                let checkedBtn = phoneWrapper.querySelector('.checked');
+                let checkedCode = checkedBtn.querySelector('.code');
+                let checkedCountry = checkedBtn.querySelector('.country');
+                checkedCode.innerHTML = this.value.replaceAll(' ', '');
+                checkedCountry.innerHTML = massive[i].code;
+            })
+        }
     })
     .catch(error => {
         console.error('Error fetching data:', error);
     });
 
+const phoneBtn = document.querySelector('.phone__select_btn');
+console.log(phoneBtn);
 
-//  https://flagcdn.com/16x12/ua.png меняем ua
+phoneBtn.addEventListener('click', function () {
+    console.log(this.nextElementSibling);
+
+    if (this.nextElementSibling.classList.contains('active')) {
+        this.nextElementSibling.classList.remove('active');
+    } else {
+        this.nextElementSibling.classList.add('active');
+    }
+})
