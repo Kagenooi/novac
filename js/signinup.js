@@ -7,15 +7,13 @@ window.addEventListener('resize', function () { adaptive(); });
 
 import {
     placeholderAnimate,
-    phoneCodes
 } from "./module.js";
 window.placeholderAnimate = placeholderAnimate;
 placeholderAnimate();
 
-window.phoneCodes = phoneCodes;
-phoneCodes();
 
 const selectWrapper = document.querySelector('.phone__select_dropdown_scrolled');
+
 fetch('https://countriesnow.space/api/v0.1/countries/codes', {
     method: 'GET',
     headers: {
@@ -64,10 +62,14 @@ fetch('https://countriesnow.space/api/v0.1/countries/codes', {
                 let checkedBtn = phoneWrapper.querySelector('.checked');
                 let checkedCode = checkedBtn.querySelector('.code');
                 let checkedCountry = checkedBtn.querySelector('.country');
+                let checkedFlag = checkedBtn.querySelector('.flag');
                 checkedCode.innerHTML = this.value.replaceAll(' ', '');
                 checkedCountry.innerHTML = massive[i].code;
+                checkedFlag.src = `https://flagcdn.com/${massive[i].code.toLowerCase()}.svg`;
+                document.querySelector('.phone__select_dropdown').classList.remove('active');
             })
         }
+        chooseCode[0].click();
     })
     .catch(error => {
         console.error('Error fetching data:', error);

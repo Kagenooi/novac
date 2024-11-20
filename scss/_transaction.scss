@@ -40,6 +40,18 @@
     &__tabs {
         padding: 20px 0 0;
 
+        .dropdown {
+
+            &.disabled {
+                opacity: .5;
+                cursor: not-allowed;
+
+                * {
+                    cursor: not-allowed;
+                    pointer-events: none;   
+                }
+            }
+        }
         &_item {
             display: none;
 
@@ -51,7 +63,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 25px;
-                margin: 20px 0;
+                margin: 25px 0;
                 grid-column: 1 / 3;
             }
 
