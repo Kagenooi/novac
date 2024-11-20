@@ -934,7 +934,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 30px 15px;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -955,7 +955,7 @@ body {
   background: #fff;
   border-radius: 0 0 20px 20px;
   padding: 40px;
-  max-height: 95%;
+  max-height: 90%;
 }
 .modal__wrapper.lg {
   max-width: 60%;
@@ -1134,7 +1134,6 @@ td img {
 }
 .list__scrolled table {
   margin-top: -20px;
-  margin-bottom: -20px;
 }
 .list__item {
   display: grid;
@@ -1174,4 +1173,151 @@ td img {
 .list__item_btn_icon {
   width: 8px;
   height: 20px;
+}
+
+#contragent > div {
+  max-width: 1280px;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+#contragent .modal__scrolled {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 680px;
+}
+#contragent .modal__scrolled::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(0, 0, 0, 0.2509803922);
+  border-radius: 20px;
+}
+#contragent .modal__scrolled::-webkit-scrollbar-thumb {
+  width: 6px;
+  background: rgba(19, 37, 57, 0.3137254902);
+  border-radius: 20px;
+}
+
+.contragent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding: 0 20px;
+}
+.contragent__closeBtn {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+}
+.contragent__title {
+  font-family: Wix Madefor Display;
+  font-size: 32px;
+  font-weight: 700;
+}
+.contragent__orders {
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.contragent__orders_title {
+  padding: 20px;
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
+}
+.contragent__orders_btns {
+  display: flex;
+  grid-gap: 10px;
+  padding-left: 20px;
+}
+.contragent__orders_btns_btn {
+  padding: 5px 10px;
+  background: rgba(161, 164, 189, 0.1882352941);
+  font-family: Wix Madefor Display;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.contragent__orders_btns_btn:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.contragent__orders_btns_btn:last-child {
+  border-radius: 0 20px 20px 0;
+}
+.contragent__orders_btns_btn.active, .contragent__orders_btns_btn:hover {
+  background: #32AC70;
+  color: #fff;
+  transition: 0.3s;
+}
+.contragent__orders_tab {
+  padding: 12px;
+  display: none;
+}
+.contragent__orders_tab.active {
+  display: block;
+}
+.contragent__orders_tab_scrolled {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 12px 0 0;
+}
+.contragent__orders_tab_scrolled::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(0, 0, 0, 0.2509803922);
+  border-radius: 20px;
+}
+.contragent__orders_tab_scrolled::-webkit-scrollbar-thumb {
+  width: 6px;
+  background: rgba(19, 37, 57, 0.3137254902);
+  border-radius: 20px;
+}
+.contragent__orders_tab table {
+  border-spacing: 12px;
+}
+.contragent__orders_tab table tr,
+.contragent__orders_tab table tr:last-child,
+.contragent__orders_tab table tr:first-child {
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.contragent__orders_tab table .details {
+  margin: 0 auto;
+}
+.contragent__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.contragent__details_requisites, .contragent__details_info {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  margin-bottom: 5px;
+}
+.contragent__details_requisites_title, .contragent__details_info_title {
+  font-family: Wix Madefor Display;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.contragent__details_requisites table {
+  margin-top: -20px;
+}
+.contragent__details_requisites table tr {
+  height: 35px;
+}
+.contragent__details_requisites table tr td,
+.contragent__details_requisites table tr th {
+  text-align: left;
+  font-size: 18px;
+}
+.contragent__details_info table {
+  margin-top: -20px;
+}
+.contragent__details_info table tr {
+  height: 35px;
+}
+.contragent__details_info table tr td,
+.contragent__details_info table tr th {
+  text-align: left;
+  font-size: 18px;
 }/*# sourceMappingURL=client-contragent.css.map */
