@@ -67,6 +67,7 @@ fetch('https://countriesnow.space/api/v0.1/countries/codes', {
                 checkedCountry.innerHTML = massive[i].code;
                 checkedFlag.src = `https://flagcdn.com/${massive[i].code.toLowerCase()}.svg`;
                 document.querySelector('.phone__select_dropdown').classList.remove('active');
+                document.querySelector('#phoneCodeHidden').value = massive[i].dial_code;
             })
         }
         chooseCode[0].click();
