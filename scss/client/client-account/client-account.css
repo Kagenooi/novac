@@ -954,7 +954,7 @@ body {
   width: 100%;
   background: #fff;
   border-radius: 0 0 20px 20px;
-  padding: 40px;
+  padding: 40px 14px 40px 20px;
   max-height: 90%;
 }
 .modal__wrapper.lg {
@@ -965,6 +965,27 @@ body {
 }
 .modal__wrapper.sm {
   max-width: 40%;
+}
+.modal__scrolled {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 680px;
+  padding: 0 20px;
+}
+.modal__scrolled::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(0, 0, 0, 0.2509803922);
+  border-radius: 20px;
+}
+.modal__scrolled::-webkit-scrollbar-thumb {
+  width: 6px;
+  background: rgba(19, 37, 57, 0.3137254902);
+  border-radius: 20px;
+}
+
+#transaction .modal__wrapper {
+  padding: 40px;
 }
 
 .transaction {

@@ -217,21 +217,21 @@
                 </div>
             </div>
         </main>
-
+        
         <!-- contragent modal -->
 
         <div class="modal" id="contragent">
             <div class="modal__wrapper">
+                <button type="button" class="contragent__closeBtn" onclick="toggleActive('contragent')">
+                    <img src="images/closeBtnIcon.svg" alt="" class="contragent__closeBtn_icon">
+                </button>
                 <div class="modal__scrolled">
                     <div class="contragent">
-                        <button type="button" class="contragent__closeBtn">
-                            <img src="images/closeBtnIcon.svg" alt="" class="contragent__closeBtn_icon">
-                        </button>
                         <h2 class="contragent__title">Контрагент ООО Сурматов</h2>
                         <div class="contragent__orders">
                             <h3 class="contragent__orders_title">Связанные транзакции</h3>
                             <div class="contragent__orders_btns">
-                                <button type="button" class="contragent__orders_btns_btn" data-tab="activeTransactions" id="defaultTab">Активные транзакции</button>
+                                <button type="button" class="contragent__orders_btns_btn" data-tab="activeTransactions" id="defaultContragentTab">Активные транзакции</button>
                                 <button type="button" class="contragent__orders_btns_btn" data-tab="allTransactions">Все транзакции</button>
                             </div>
                             <div class="contragent__orders_tab" id="activeTransactions">
@@ -245,7 +245,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -259,7 +259,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -273,7 +273,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -287,7 +287,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -301,7 +301,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -315,7 +315,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -335,7 +335,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -349,7 +349,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -363,7 +363,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -377,7 +377,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -391,7 +391,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -405,7 +405,7 @@
                                             </td>
                                             <td colspan="4">Комиссия: 300$ | 30,000₽</td>
                                             <td colspan="2">
-                                                <button type="button" class="details primaryBtn" onclick="toggleActive('contragentDetails')">
+                                                <button type="button" class="details primaryBtn" onclick="toggleActive('orderDetails')">
                                                     <span class="details__txt">Детали</span>
                                                     <img src="" alt="" class="details__icon">
                                                 </button>
@@ -468,15 +468,184 @@
             </div>
         </div>
 
-        <!-- contragentDetails modal -->
-
-        <div class="modal" id="contragentDetails">
-            <div class="modal__wrapper">
-                <div class="contragentDetails">
-
+        <div class="modal" id="orderDetails">
+            <div class="modal__wrapper md">
+                <button type="button" class="orderDetails__closeBtn" onclick="toggleActive('orderDetails')">
+                    <img src="images/closeBtnIcon.svg" alt="" class="orderDetails__closeBtn_icon">
+                </button>
+                <div class="modal__scrolled">
+                    <div class="orderDetails">
+                        <div class="orderDetails__wrapper">
+                            <h2 class="orderDetails__title">Транзакция #6236</h2>
+                            <div class="orderDetails__status">
+                                <div class="orderDetails__status_el active">
+                                    <strong class="orderDetails__status_el_name" data-bg="#808080">Не обработан</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name" data-bg="#0000FF">В обработке</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name" data-bg="#FFA500">Обработан</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name" data-bg="#FFFF00">В работе</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name" data-bg="#800080">Подтверждается</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                                <div class="orderDetails__status_el">
+                                    <strong class="orderDetails__status_el_name" data-bg="#008000">Успешно</strong>
+                                    <span class="orderDetails__status_el_candle"></span>
+                                </div>
+                            </div>
+                            <div class="orderDetails__info">
+                                <div class="orderDetails__info_btns">
+                                    <button type="button" class="orderDetails__info_btns_btn" data-tab="contragentOrder" id="defaultTab">Контрагент</button>
+                                    <button type="button" class="orderDetails__info_btns_btn" data-tab="requisites">Реквизиты</button>
+                                    <button type="button" class="orderDetails__info_btns_btn" data-tab="transactionDocs">Документы транзакции</button>
+                                </div>
+                                <div class="orderDetails__info_tab" id="contragentOrder">
+                                    <table>
+                                        <tr>
+                                            <td>Название контрагента</td>
+                                            <td>OOO Tech insurans</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес</td>
+                                            <td>Армения, 2502, ул. Агаси Ханджяна 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Страна регистрации</td>
+                                            <td>Армения</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ИНН</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SWIFT</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IBAN</td>
+                                            <td>GB29NWBK60161331926819</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Название банка</td>
+                                            <td>ЗАО Сбербанк</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес банка</td>
+                                            <td>г. Москва, Пресненская набережная, д. 10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="orderDetails__info_tab" id="requisites">
+                                    <table>
+                                        <tr>
+                                            <td>Название контрагента</td>
+                                            <td>OOO Tech insurans</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес</td>
+                                            <td>Армения, 2502, ул. Агаси Ханджяна 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Страна регистрации</td>
+                                            <td>Армения</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ИНН</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SWIFT</td>
+                                            <td>7712345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IBAN</td>
+                                            <td>GB29NWBK60161331926819</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Название банка</td>
+                                            <td>ЗАО Сбербанк</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Адрес банка</td>
+                                            <td>г. Москва, Пресненская набережная, д. 10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="orderDetails__info_tab" id="transactionDocs">
+                                    <div class="orderDetails__info_tab_item">
+                                        <h3 class="orderDetails__info_tab_item_title">Торговый контракт</h3>
+                                        <a href="" class="orderDetails__info_tab_item_link">https://springridgeclubs.com/online-casinos-an-introduction/</a>
+                                    </div>
+                                    <div class="orderDetails__info_tab_item">
+                                        <h3 class="orderDetails__info_tab_item_title">Торговый контракт</h3>
+                                        <a href="" class="orderDetails__info_tab_item_link">https://springridgeclubs.com/online-casinos-an-introduction/</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orderDetails__sum">
+                                <h2 class="orderDetails__sum_title">Сумма</h2>
+                                <div class="orderDetails__sum_wrapper">
+                                    <div class="orderDetails__sum_wrapper_details">
+                                        <div class="orderDetails__sum_wrapper_details_el">
+                                            <p class="orderDetails__sum_wrapper_details_el_key">Сумма сделки:</p>
+                                            <p class="orderDetails__sum_wrapper_details_el_value">
+                                                <span class="orderDetails__sum_wrapper_details_el_value_summ">0,00</span>
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency">AED</span>
+                                            </p>
+                                        </div>
+                                        <div class="orderDetails__sum_wrapper_details_el">
+                                            <p class="orderDetails__sum_wrapper_details_el_key">Комиссия:</p>
+                                            <p class="orderDetails__sum_wrapper_details_el_value">
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency entrance">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_summ">0,00</span>
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">AED</span>
+                                                </span>
+                                                /
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency output">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_summ">0,00</span>
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">RUB</span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="orderDetails__sum_wrapper_details_el">
+                                            <p class="orderDetails__sum_wrapper_details_el_key">Курс:</p>
+                                            <p class="orderDetails__sum_wrapper_details_el_value">
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency entrance">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_summ">0,00</span>
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">AED</span>
+                                                </span>
+                                                /
+                                                <span class="orderDetails__sum_wrapper_details_el_value_currency output">
+                                                    <span class="orderDetails__sum_wrapper_details_el_value_currency_name">RUB</span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="orderDetails__sum_wrapper_total">
+                                        <p class="orderDetails__sum_wrapper_total_title">Итого:</p>
+                                        <p class="orderDetails__sum_wrapper_total_value">
+                                            <span class="orderDetails__sum_wrapper_total_value_summ">0,00</span>
+                                            <span class="orderDetails__sum_wrapper_total_value_currency">RUB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <!-- transaction modal -->
 
         <div class="modal" id="transaction">
